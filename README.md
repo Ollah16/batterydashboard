@@ -1,70 +1,86 @@
-# Getting Started with Create React App
+# Battery Monitoring Dashboard ⚡
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A **React-based Battery Monitoring Dashboard** that provides real-time battery status, charge level, and historical data visualization using **Recharts** and **Framer Motion** for animations. It also includes **dark mode** support for better user experience.
 
-## Available Scripts
+## 🚀 Features  
+- 🔋 **Battery Card** – Displays charge level and charging state.  
+- 📊 **Interactive Charge History Graph** – Shows charge levels over time using **Recharts**.  
+- 🌙 **Dark Mode Support** – The UI adapts dynamically using **Tailwind CSS**.  
+- ⚡ **Modular & Reusable Components** – Clean, maintainable architecture.  
 
-In the project directory, you can run:
+## 📸 Screenshots   
 
-### `npm start`
+### Battery Status Component  
+![Battery Status](screenshots/battery_status.png)  
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Charge History Graph  
+![Charge Graph](screenshots/charge_graph.png)  
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🛠️ Tech Stack  
+- **React** – Component-based UI  
+- **Tailwind CSS** – Styling  
+- **Recharts** – Graphs & Charts  
+- **Framer Motion** – Animations  
+- **Context API** – State Management  
 
-### `npm test`
+## 📂 Project Structure  
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+/battery-dashboard
+  ├── /screenshots 📸         
+  │   ├── battery_status.png
+  │   ├── charge_graph.png
+  ├── /src
+  │   ├── /assets
+  │   │   ├── /icons           
+  │   │   │   ├── /batteryIcon   
+  │   │   │   │   ├── BatteryIconBase.js  
+  │   │   │   │   ├── BatteryIconCap.js
+  │   │   │   │   ├── BatteryIconFill.js
+  │   │   │   │   ├── BatteryIconOutline.js 
+  │   │   │   │   ├── BatteryIconStatusText.js 
+  │   │   │   ├── ChargeIcon 
+  │   │   │   ├── DarkModeIcon.js    
+  │   │   │   ├── LightModeIcon.js         
+  │   ├── /components
+  │   │   ├── /ui                 
+  │   │   │   ├── Button.js
+  │   ├── /context               
+  │   │   ├── BatteryContext.js
+  │   │   ├── ThemeContext.js
+  │   ├── /features          
+  │   │   ├── /components
+  │   │   │   ├── BatteryCapacity.js
+  │   │   │   ├── BatteryCharge.js
+  │   │   │   ├── BatteryHealth.js
+  │   │   │   ├── BatteryStatus.js
+  │   │   │   ├── BatteryUptime.js
+  │   │   ├── BatteryCard.js
+  │   │   ├── BatteryDetail.js
+  │   │   ├── BatteryGraph.js
+  │   ├── /pages       
+  │   │   ├── Dashboard.js
+  │   ├── /utils       
+  │   │   ├── api.js             
+  │   │   ├── batteryUtils.js
+  │   ├── App.js
+  │   ├── index.js
+  ├── package.json
+  ├── README.md
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🔧 Installation & Setup  
+1. **Extract Zip File:**  
+Unzip the project folder before proceeding.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Install dependencies:
+npm install
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Start the development server:
+npm start
 
-### `npm run eject`
+Open http://localhost:3000 in your browser.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+🎨 Theming
+Light Mode: Uses a soft background.
+Dark Mode: A deep dark background.
+Configured via Tailwind CSS in tailwind.config.js.# batterydashboard
