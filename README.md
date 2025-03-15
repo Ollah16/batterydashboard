@@ -3,7 +3,7 @@
 A **React-based Battery Monitoring Dashboard** that provides real-time battery status, charge level, and historical data visualization using **Recharts** and **Framer Motion** for animations. It also includes **dark mode** support for better user experience.
 
 ## 🚀 Features  
-- 🔋 **Battery Card** – Displays charge level and charging state.  
+- 🔋 **Battery Card** – Displays charge level, charging state and battery Capacity.  
 - 📊 **Interactive Charge History Graph** – Shows charge levels over time using **Recharts**.  
 - 🌙 **Dark Mode Support** – The UI adapts dynamically using **Tailwind CSS**.  
 - ⚡ **Modular & Reusable Components** – Clean, maintainable architecture.  

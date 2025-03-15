@@ -1,11 +1,11 @@
 import { motion } from "framer-motion";
 import { useMemo } from "react";
 import BatteryIconOutline from "./BatteryIconOutline";
-import BatteryIconFill from "./BatteryIconFill";
 import BatteryIconStatusText from "./BatteryIconStatusText";
 import BatteryIconCap from "./BatteryIconCap";
 import { getBatteryColor, getBatteryFillHeight, getBatteryY } from "../../../utils/batteryUtils";
 import { useBatteryData } from "../../../context/BatteryContext";
+import BatteryIconFill from "./BatteryIconFill";
 
 const BatteryIconBase = () => {
     const { batteryData: { chargeLevel } } = useBatteryData();
